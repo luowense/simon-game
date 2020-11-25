@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="newGame">
+            NOUVELLE PARTIE
+        </button>
+        <hr>
+        <h4>Score: {{score}}</h4>
+        <hr>
+        <div>
+            <span class="carre" v-bind:class="{ bleu: hautGauche }" v-on:click="selectSquare('hautGauche')"></span>
+            <span class="carre" v-bind:class="{ rouge: hautDroite }" v-on:click="selectSquare('hautDroite')"></span>
+        </div>
+        <div>
+            <span class="carre" v-bind:class="{ vert: basGauche }" v-on:click="selectSquare('basGauche')"></span>
+            <span class="carre" v-bind:class="{ jaune: basDroite }" v-on:click="selectSquare('basDroite')"></span>
+        </div>
+        </hr>
+        <span>Sequence: </span>
+        <pre>{{sequence}}</pre>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
